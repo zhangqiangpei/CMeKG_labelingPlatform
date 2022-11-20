@@ -1,3 +1,23 @@
+function uplod_file1() {
+  $('#fi1').trigger('click')
+}
+function file_change1() {
+  var files = $('#fi1')[0].files
+  for (var i = 0; i < files.length; i++) {
+      $('#enconfig').append(i + 1 + '. ' + files[i].name + '\n')
+  }
+}
+
+
+function uplod_file2() {
+  $('#fi2').trigger('click')
+}
+function file_change2() {
+  var files = $('#fi2')[0].files
+  for (var i = 0; i < files.length; i++) {
+      $('#reconfig').append(i + 1 + '. ' + files[i].name + '\n')
+  }
+}
 $('#config').click(function () {
     var username = $('#user_name').val()
      $.ajax({
@@ -26,7 +46,7 @@ $('#config').click(function () {
             '                                                    <option>'+ username + '_en.txt</option>\n' +
             '                                                 </select></div></div>' +
             '              </div><div class="mdc-layout-grid__inner">' +
-            '                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3"><button title="选择文件" class="mdc-button mdc-button--stroked mdc-ripple-upgraded" onclick="uplod_file()" data-mdc-auto-init="MDCRipple" style="--mdc-ripple-fg-size:10px;"><i class="material-icons mdc-button__icon">folder_open</i></button></div>' +
+            '                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3"><button title="选择文件" class="mdc-button mdc-button--stroked mdc-ripple-upgraded" onclick="uplod_file1()" data-mdc-auto-init="MDCRipple" style="--mdc-ripple-fg-size:10px;"><i class="material-icons mdc-button__icon">folder_open</i></button></div>' +
             '                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7"><textarea id="enconfig" class="mdc-textfield__input" style="width: 100%;height: 80px">'+ens+'</textarea></div>' +
             '              </div>'+
              '              <div class="mdc-layout-grid__inner">' +
@@ -35,7 +55,7 @@ $('#config').click(function () {
             '                                                    <option>'+ username + '_re.json</option>\n' +
             '                                                 </select></div></div>' +
             '              </div><div class="mdc-layout-grid__inner">' +
-            '                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3"><button title="选择文件" class="mdc-button mdc-button--stroked mdc-ripple-upgraded" onclick="uplod_file()" data-mdc-auto-init="MDCRipple" style="--mdc-ripple-fg-size:10px;"><i class="material-icons mdc-button__icon">folder_open</i></button></div>' +
+            '                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3"><button title="选择文件" class="mdc-button mdc-button--stroked mdc-ripple-upgraded" onclick="uplod_file2()" data-mdc-auto-init="MDCRipple" style="--mdc-ripple-fg-size:10px;"><i class="material-icons mdc-button__icon">folder_open</i></button></div>' +
             '                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7"><textarea id="reconfig" class="mdc-textfield__input" style="width: 100%;height: 80px">'+res+'</textarea></div>' +
             '              </div>'+
             '            </div>',

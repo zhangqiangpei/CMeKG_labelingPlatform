@@ -70,6 +70,5 @@ class Task_File(db.Model):
     task_name = db.Column(db.String(32), nullable=False, primary_key=True)
     file_name = db.Column(db.String(32), nullable=False, primary_key=True)
 
-
 if __name__ == '__main__':
-    db.create_all()
+	db.create_all()

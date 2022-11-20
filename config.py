@@ -1,4 +1,4 @@
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:1234@localhost:3306/test?charset=utf8'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:@localhost:3306/nan?charset=utf8'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 MAIL_SERVER = 'smtp.qq.com'
 MAIL_PORT = 587

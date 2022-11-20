@@ -283,6 +283,7 @@ def upd_task():
 
 
 def get_progess(l):
+    print("get_progess", l, os.listdir('static/源文件/'+l+'/'), os.path.exists('static/源文件/'+l+'/'), os.path.exists('static/一标/'+l+'/'), os.path.exists('static/二标/' + l + '/'), os.path.exists('static/三标/' + l + '/'))
     if os.listdir('static/源文件/'+l+'/'):
         if os.path.exists('static/源文件/'+l+'/') and  os.path.exists('static/一标/'+l+'/')and os.path.exists('static/二标/' + l + '/') and os.path.exists('static/三标/' + l + '/'):
             li = os.listdir('static/源文件/'+l+'/')

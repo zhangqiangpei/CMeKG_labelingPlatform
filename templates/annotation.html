@@ -489,6 +489,14 @@
       <!-- partial -->
     </div>
   </div>
+  <form id="file" enctype="multipart/form-data">
+    <input type="text" id="dataname" name="dataname" style="display: none"/>
+    <input onchange="file_change1()" type="file" multiple="multiple" id="fi1" name="file" style="display: none"/>
+  </form>
+  <form id="file" enctype="multipart/form-data">
+    <input type="text" id="dataname" name="dataname" style="display: none"/>
+    <input onchange="file_change2()" type="file" multiple="multiple" id="fi2" name="file" style="display: none"/>
+  </form>
   <!-- body wrapper -->
   <!-- plugins:js -->
   <script src="{{ url_for('static', filename='js/material-components-web.min.js') }}"></script>

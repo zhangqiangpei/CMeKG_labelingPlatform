@@ -32,6 +32,7 @@ def main(name, count):
         with open('static/labels/' + username + '_en.txt', 'a') as f:
             pass
     res = []
+    res_f = {}
     if os.path.exists('static/labels/' + username + '_re.json'):
         with open('static/labels/' + username + '_re.json', 'r', encoding='utf-8') as f:
             ex = json.load(f)
@@ -46,7 +47,6 @@ def main(name, count):
                     if rel_type == 'x-x':
                         rel_type = r['rel_type']
                     rel_types.append(rel_type)
-            res_f = {}
             for rel in rel_types:
                 if len(rel.split('-')) == 1:
                     e1_label = 'x'

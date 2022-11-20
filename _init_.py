@@ -6,6 +6,8 @@ from flask_login import LoginManager
 app = Flask(__name__)
 app.config.from_object('config')
 db = SQLAlchemy(app)
+app.app_context().push()
+print("pzq2")
 mail = Mail(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
